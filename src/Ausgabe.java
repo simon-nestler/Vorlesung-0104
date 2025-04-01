@@ -37,8 +37,7 @@ public class Ausgabe {
         System.out.printf("Das Zeichen ist %C\n", a);
         System.out.printf("Die Zahl ist %X\n", zahl);
 
-        System.out.printf("Aktuelle Minute: %TM\n", cal);
-        System.out.printf("Aktueller Monat: %Tm\n", cal);
+        System.out.printf("Heute ist der %td.%<tm.%<tY! Es ist %<tH.%<tM Uhr.\n", cal);
 
         // Heute ist der 01.04.2025! Es ist 12.48 Uhr.
     }

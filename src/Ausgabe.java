@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.Properties;
 
@@ -28,16 +30,25 @@ public class Ausgabe {
         int zahl = 255;
         Calendar cal = Calendar.getInstance();
 
-        System.out.printf("Hallo %15s %15s, %15s!\n", "Max", "Mustermann", "Willkommen");
-        System.out.printf("Hallo %15s %15s, %15s!\n", "Erna", "Musterfrau", "Grüß Gott");
-        System.out.printf("Das Buch kostet %5.2f Euro\n", preis);
-        System.out.printf("Das Buch kostet %f Euro\n", preis);
-        System.out.println("Das Buch kostet " + preis + " Euro");
+        PrintWriter out;
+        try {
+            out = new PrintWriter("test2.txt");
 
-        System.out.printf("Das Zeichen ist %C\n", a);
-        System.out.printf("Die Zahl ist %X\n", zahl);
+            out.printf("Hallo %15s %15s, %15s!\n", "Max", "Mustermann", "Willkommen");
+            out.printf("Hallo %15s %15s, %15s!\n", "Erna", "Musterfrau", "Grüß Gott");
+            out.printf("Das Buch kostet %5.2f Euro\n", preis);
+            out.printf("Das Buch kostet %f Euro\n", preis);
+            out.println("Das Buch kostet " + preis + " Euro");
 
-        System.out.printf("Heute ist der %td.%<tm.%<tY! Es ist %<tH.%<tM Uhr.\n", cal);
+            out.printf("Das Zeichen ist %C\n", a);
+            out.printf("Die Zahl ist %X\n", zahl);
+
+            out.printf("Heute ist der %td.%<tm.%<tY!%nEs ist %<tH.%<tM Uhr.\n", cal);
+            out.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         // Heute ist der 01.04.2025! Es ist 12.48 Uhr.
     }

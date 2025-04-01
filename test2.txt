@@ -1,0 +1,9 @@
+Hallo             Max      Mustermann,      Willkommen!
+Hallo            Erna      Musterfrau,       Grüß Gott!
+Das Buch kostet 19,90 Euro
+Das Buch kostet 19,900000 Euro
+Das Buch kostet 19.9 Euro
+Das Zeichen ist A
+Die Zahl ist FF
+Heute ist der 01.04.2025!
+Es ist 13.03 Uhr.

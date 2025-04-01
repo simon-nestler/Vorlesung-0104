@@ -20,4 +20,13 @@ public class Ausgabe {
         System.out.println("Erste Zeile\n\tZweite Zeile");
 
     }
+
+    public static void formattierteAusgabe() {
+        float preis = 19.90f;
+
+        System.out.printf("Hallo %15s %15s, %15s!\n", "Max", "Mustermann", "Willkommen");
+        System.out.printf("Hallo %15s %15s, %15s!\n", "Erna", "Musterfrau", "Grüß Gott");
+        System.out.printf("Das Buch kostet %.2f Euro\n", preis);
+        System.out.println("Das Buch kostet " + preis + " Euro");
+    }
 }

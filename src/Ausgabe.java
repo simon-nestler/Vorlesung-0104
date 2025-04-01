@@ -14,7 +14,10 @@ public class Ausgabe {
         System.out.println("OS: " + os);
         System.out.println("OS Version: " + osVersion);
         System.out.println("Home: " + home);
-        System.out.println("User: " + user);
+        System.out.println("User: \"" + user + "\"");
         System.out.println("Java Version: " + javaVersion);
+
+        System.out.println("Erste Zeile\n\tZweite Zeile");
+
     }
 }

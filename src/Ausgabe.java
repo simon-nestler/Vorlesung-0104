@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Properties;
 
 public class Ausgabe {
@@ -23,10 +24,22 @@ public class Ausgabe {
 
     public static void formattierteAusgabe() {
         float preis = 19.90f;
+        int a = 65;
+        int zahl = 255;
+        Calendar cal = Calendar.getInstance();
 
         System.out.printf("Hallo %15s %15s, %15s!\n", "Max", "Mustermann", "Willkommen");
         System.out.printf("Hallo %15s %15s, %15s!\n", "Erna", "Musterfrau", "Grüß Gott");
-        System.out.printf("Das Buch kostet %.2f Euro\n", preis);
+        System.out.printf("Das Buch kostet %5.2f Euro\n", preis);
+        System.out.printf("Das Buch kostet %f Euro\n", preis);
         System.out.println("Das Buch kostet " + preis + " Euro");
+
+        System.out.printf("Das Zeichen ist %C\n", a);
+        System.out.printf("Die Zahl ist %X\n", zahl);
+
+        System.out.printf("Aktuelle Minute: %TM\n", cal);
+        System.out.printf("Aktueller Monat: %Tm\n", cal);
+
+        // Heute ist der 01.04.2025! Es ist 12.48 Uhr.
     }
 }
